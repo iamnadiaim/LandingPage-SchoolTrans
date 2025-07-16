@@ -44,7 +44,7 @@ export default function KenapaPilihKami() {
   ];
 
   return (
-    <section className="pt-10 px-4 md:px-6 lg:px-20 bg-white font-poppins">
+    <section className="pt-4 px-4 md:px-6 lg:px-20 bg-white font-poppins">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h2 className="text-3xl font-extrabold text-blue-600 mb-5">
           Kenapa Sekolah Memilih SchoolTrans?

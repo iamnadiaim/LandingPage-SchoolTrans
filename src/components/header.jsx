@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm px-8 text-gray-700">
-      <div className="container flex flex-col flex-wrap items-center justify-between py-2 mx-auto md:flex-row max-w-7xl">
+      <div className="container mx-auto flex flex-col flex-wrap items-center justify-between py-1 md:flex-row max-w-7xl">
         <div className="relative flex flex-col md:flex-row">
           <Link
             to="/"

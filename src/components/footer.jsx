@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 sm:py-14 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-4 sm:py-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {/* Logo & deskripsi */}
           <div>
