@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import tk1 from "../assets/tk1.jpg";
 import tk2 from "../assets/tk2.jpg";
 import tk3 from "../assets/tk3.jpg";
@@ -34,10 +37,17 @@ const sekolahData = [
 ];
 
 export default function SemuaMitra() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section className="bg-white text-gray-800 pt-40 pb-10 px-4 md:px-20 lg:px-32 font-poppins">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-3xl font-bold text-center text-blue-700 mb-10">
+        <h2
+          className="text-3xl md:text-3xl font-bold text-center text-blue-700 mb-10"
+          data-aos="fade-up"
+        >
           Sekolah Mitra SchoolTrans
         </h2>
 
@@ -45,6 +55,8 @@ export default function SemuaMitra() {
           {sekolahData.map((item, i) => (
             <div
               key={i}
+              data-aos="zoom-in"
+              data-aos-delay={i * 100}
               className="bg-white border border-gray-200 p-4 rounded-xl text-center shadow hover:shadow-md transition duration-300"
             >
               <div className="w-24 h-16 mx-auto mb-3">

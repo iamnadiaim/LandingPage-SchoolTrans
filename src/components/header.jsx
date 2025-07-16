@@ -33,7 +33,7 @@ export default function Header() {
         <div className="relative flex flex-col md:flex-row">
           <Link
             to="/"
-            className="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
+            className="flex items-center mb-0 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
           >
             <img src={logo} alt="SchoolTrans Logo" className="h-[100px] w-auto" />
           </Link>

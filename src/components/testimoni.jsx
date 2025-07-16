@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
@@ -27,6 +29,10 @@ const testimonials = [
 export default function Testimonials() {
   const [likes, setLikes] = useState(Array(testimonials.length).fill(0));
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const handleLike = (index) => {
     const updatedLikes = [...likes];
     updatedLikes[index]++;
@@ -40,7 +46,10 @@ export default function Testimonials() {
       className="bg-white py-5 px-4 md:px-10 font-poppins mt-2 mb-8"
     >
       <div className="max-w-7xl mx-auto px-10 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center">
+        <div
+          className="max-w-2xl mx-auto text-center"
+          data-aos="fade-up"
+        >
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-blue-700">
             Testimoni dari Sekolah Mitra
           </h2>
@@ -48,7 +57,11 @@ export default function Testimonials() {
 
         <ul className="mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((item, index) => (
-            <li key={index}>
+            <li
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 150}
+            >
               <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
                 {/* Kutipan Icon */}
                 <svg

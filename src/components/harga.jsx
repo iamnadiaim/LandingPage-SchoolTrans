@@ -86,7 +86,7 @@ export default function Harga() {
   const paketList = paketMode === "bulanan" ? paketBulanan : paketTahunan;
 
   return (
-    <section className="min-h-screen bg-white text-gray-800 pt-40 pb-10 px-4 md:px-20 lg:px-32 font-poppins">
+    <section className="min-h-screen bg-white text-gray-800 pt-32 pb-10 px-4 md:px-20 lg:px-32 font-poppins">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-blue-600 mb-4" data-aos="fade-down">
           Paket Harga
@@ -112,7 +112,7 @@ export default function Harga() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 -mt-4">
           {paketList.map((paket, index) => (
             <div
               key={index}

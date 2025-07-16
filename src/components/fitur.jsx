@@ -48,30 +48,37 @@ export default function FiturArmada() {
   ];
 
   return (
-    <section className="bg-white text-gray-800 pt-40 pb-10 px-4 md:px-20 lg:px-32 font-poppins">
+    <section className="bg-white text-gray-800 pt-32 pb-10 px-2 md:px-6 lg:px-10 font-poppins">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-extrabold text-blue-600 mb-4">
+        <h2
+          className="text-3xl font-extrabold text-blue-600 mb-4"
+          data-aos="fade-up"
+        >
           Fitur & Fasilitas Bus Sekolah
         </h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p
+          className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           SchoolTrans menyediakan layanan bus sekolah yang nyaman dan aman,
           dirancang khusus untuk mendukung kebutuhan siswa dari TK hingga SMA.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {fiturList.map((fitur, index) => (
             <div
               key={index}
-              data-aos="fade-up"
+              data-aos="zoom-in-up"
               data-aos-delay={index * 100}
-              className="bg-white border border-gray-200 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 group hover:scale-105"
+              className="bg-white border border-gray-200 px-3 py-2 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group hover:scale-[1.02] w-full max-w-[1000px] mx-auto"
             >
               <div
-                className={`w-14 h-14 mb-4 rounded-full bg-gradient-to-br ${fitur.color} flex items-center justify-center text-white text-2xl shadow-lg`}
+                className={`w-14 h-14 mb-2 rounded-full bg-gradient-to-br ${fitur.color} flex items-center justify-center text-white text-2xl shadow-lg`}
               >
                 {fitur.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600 transition">
+              <h3 className="text-lg font-semibold mb-1 text-gray-800 group-hover:text-blue-600 transition">
                 {fitur.title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed">
