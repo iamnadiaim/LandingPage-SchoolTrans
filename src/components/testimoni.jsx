@@ -46,10 +46,7 @@ export default function Testimonials() {
       className="bg-white py-5 px-4 md:px-10 font-poppins mt-2 mb-8"
     >
       <div className="max-w-7xl mx-auto px-10 sm:px-6 lg:px-8">
-        <div
-          className="max-w-2xl mx-auto text-center"
-          data-aos="fade-up"
-        >
+        <div className="max-w-2xl mx-auto text-center" data-aos="fade-up">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-blue-700">
             Testimoni dari Sekolah Mitra
           </h2>
@@ -57,32 +54,34 @@ export default function Testimonials() {
 
         <ul className="mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((item, index) => (
-            <li
-              key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 150}
-            >
-              <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+            <li key={index} data-aos="zoom-in" data-aos-delay={index * 150}>
+              <figure className="relative rounded-2xl bg-white p-6 shadow-lg shadow-gray-300 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 z-10">
                 {/* Kutipan Icon */}
                 <svg
                   aria-hidden="true"
                   width="105"
                   height="78"
-                  className="absolute left-6 top-6 fill-slate-100"
+                  className="absolute left-4 top-4 fill-slate-200 opacity-30 -z-0"
                 >
                   <path d="M25.086 77.292c...Z" />
                 </svg>
 
                 {/* Isi Testimoni */}
-                <blockquote className="relative">
-                  <p className="text-lg tracking-tight text-slate-900">{item.pesan}</p>
+                <blockquote className="relative z-10">
+                  <p className="text-lg tracking-tight text-slate-900">
+                    {item.pesan}
+                  </p>
                 </blockquote>
 
                 {/* Identitas + Like */}
                 <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
                   <div>
-                    <div className="font-medium text-slate-900">{item.nama}</div>
-                    <div className="text-sm text-slate-600">{item.sekolah}</div>
+                    <div className="font-medium text-slate-900">
+                      {item.nama}
+                    </div>
+                    <div className="text-sm text-slate-600">
+                      {item.sekolah}
+                    </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <img
@@ -95,7 +94,10 @@ export default function Testimonials() {
                       className="text-red-500 hover:scale-110 transition transform"
                       title="Apresiasi"
                     >
-                      ❤️ <span className="ml-1 text-slate-700">{likes[index]}</span>
+                      ❤️{" "}
+                      <span className="ml-1 text-slate-700">
+                        {likes[index]}
+                      </span>
                     </button>
                   </div>
                 </figcaption>

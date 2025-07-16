@@ -42,7 +42,7 @@ export default function SemuaMitra() {
   }, []);
 
   return (
-    <section className="bg-white text-gray-800 pt-40 pb-10 px-4 md:px-20 lg:px-32 font-poppins">
+    <section className="bg-white text-gray-800 pt-32 pb-10 px-4 md:px-20 lg:px-32 font-poppins">
       <div className="max-w-7xl mx-auto">
         <h2
           className="text-3xl md:text-3xl font-bold text-center text-blue-700 mb-10"

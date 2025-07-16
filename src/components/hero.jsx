@@ -17,18 +17,44 @@ export default function Hero() {
   const hasHalfStar = rating % 1 >= 0.5;
 
   return (
-    <section className="relative overflow-hidden font-[Poppins] bg-[#f8fafc] text-[#1e293b] mb-10 ">
-      {/* Background Gradient & Floating Circles */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-[#f8fafc] to-secondary/5 -z-10"></div>
+    <section className="relative overflow-hidden font-[Poppins] bg-[#f8fafc] text-[#1e293b] mb-10">
+      {/* Background Decorative Circles */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-[#f8fafc] to-secondary/5 -z-10" />
       <div className="absolute top-20 left-10 w-16 h-16 rounded-full bg-[#4f46e5]/10 animate-[float-reverse_5s_ease-in-out_infinite] -z-10"></div>
       <div className="absolute top-1/3 right-20 w-24 h-24 rounded-full bg-[#10b981]/10 animate-[float_6s_ease-in-out_infinite] -z-10"></div>
       <div className="absolute bottom-20 left-1/4 w-20 h-20 rounded-full bg-[#4f46e5]/15 animate-[float_6s_ease-in-out_infinite] -z-10"></div>
       <div className="absolute bottom-1/3 right-1/4 w-32 h-32 rounded-full bg-[#10b981]/15 animate-[float-reverse_5s_ease-in-out_infinite] -z-10"></div>
 
-      <div className="max-w-7xl mx-auto pt-40 pb-16 px-4 min-h-screen flex items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
-          {/* Left Side */}
-          <div className="text-center md:text-left" data-aos="fade-left">
+      <div className="max-w-7xl mx-auto pt-32 pb-16 px-4 min-h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Right Side (Gambar) tampil di atas saat mobile */}
+          <div className="order-1 md:order-2" data-aos="fade-left">
+            <div className="relative w-full max-w-md mx-auto">
+              {/* Floating Backgrounds */}
+              <div className="absolute -top-5 -left-5 w-24 h-24 bg-[#4f46e5]/10 rounded-2xl -z-10 animate-[float_5s_ease-in-out_infinite]" />
+              <div className="absolute -bottom-10 -right-5 w-24 h-24 bg-[#10b981]/10 rounded-2xl -z-10 animate-[float-reverse_5s_ease-in-out_infinite]" />
+
+              {/* Gambar */}
+              <img
+                src={foto1}
+                alt="Transportasi Aman"
+                loading="lazy"
+                className="w-full h-auto rounded-xl shadow-2xl border-8 border-white"
+              />
+
+              {/* Badge */}
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-lg shadow-md flex items-center">
+                <div className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+                <span className="text-sm font-medium">+85% Kepuasan</span>
+              </div>
+              <div className="absolute -top-6 right-0 bg-white px-4 py-2 rounded-lg shadow-md">
+                <span className="text-sm font-medium">📈 Penggunaan Naik 3x</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Left Side (Teks) tampil di bawah saat mobile */}
+          <div className="order-2 md:order-1 text-center md:text-left" data-aos="fade-right">
             <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-[#4f46e5] uppercase rounded-full bg-[#4f46e5]/10 mb-4">
               Transportasi Sekolah Modern
             </span>
@@ -39,10 +65,9 @@ export default function Hero() {
               <span className="text-[#0f172a]">Untuk Anak Anda</span>
             </h1>
 
-            <p className="text-lg text-gray-600 mb-8 max-w-lg">
-              Pantau perjalanan anak secara real-time, dapatkan notifikasi
-              otomatis, dan rasakan ketenangan setiap hari dengan solusi
-              transportasi sekolah terbaik.
+            <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+              Pantau perjalanan anak secara real-time, dapatkan notifikasi otomatis,
+              dan rasakan ketenangan setiap hari dengan solusi transportasi sekolah terbaik.
             </p>
 
             {/* CTA */}
@@ -61,11 +86,8 @@ export default function Hero() {
               </Link>
             </div>
 
-            {/* Testimonial */}
-            <div
-              className="mt-2 flex items-center justify-center md:justify-start gap-6"
-              data-aos="fade-up"
-            >
+            {/* Testimoni Rating */}
+            <div className="mt-4 flex items-center justify-center md:justify-start gap-6">
               <div className="flex -space-x-2">
                 {[tk3, sd3, smp2].map((img, i) => (
                   <img
@@ -77,7 +99,7 @@ export default function Hero() {
                 ))}
               </div>
               <div>
-                <div className="flex items-center py-2 gap-2">
+                <div className="flex items-center gap-2 py-2">
                   {[...Array(fullStars)].map((_, i) => (
                     <svg
                       key={i}
@@ -102,28 +124,6 @@ export default function Hero() {
                   Rating {rating} dari 500+ <b>sekolah</b> di seluruh Indonesia
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* Right Side */}
-          <div className="relative" data-aos="fade-left">
-            <div className="relative max-w-md mx-auto">
-              <div className="absolute -top-5 -left-10 w-32 h-32 bg-[#4f46e5]/10 rounded-2xl -z-65 animate-[float_5s_ease-in-out_infinite]"></div>
-              <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-[#10b981]/10 rounded-2xl -z-28 animate-[float-reverse_5s_ease-in-out_infinite]"></div>
-              <img
-                className="relative rounded-xl shadow-2xl border-8 border-white mb-8"
-                src={foto1}
-                alt="Transportasi Aman"
-              />
-            </div>
-
-            {/* Badge */}
-            <div className="absolute -bottom-2 left-1/4 bg-white px-4 py-2 rounded-lg shadow-md flex items-center">
-              <div className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-              <span className="text-sm font-medium">+85% Kepuasan</span>
-            </div>
-            <div className="absolute -top-10 right-1/4 bg-white px-4 py-2 rounded-lg shadow-md">
-              <span className="text-sm font-medium">📈 Penggunaan Naik 3x</span>
             </div>
           </div>
         </div>

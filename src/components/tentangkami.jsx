@@ -8,9 +8,9 @@ export default function TentangKami() {
   }, []);
 
   return (
-    <section className="font-poppins bg-white pt-32 pb-24">
+    <section className="font-poppins bg-white pt-28 pb-24">
       {/* Blok Utama: Gambar dan Deskripsi */}
-      <div className="max-w-7xl mx-auto px-4 md:px-2 mt-10 flex flex-col lg:flex-row items-center gap-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-2 mt-10 flex flex-col lg:flex-row items-center gap-20">
         {/* Gambar Gedung */}
         <div className="w-full lg:w-1/2" data-aos="fade-right">
           <img
